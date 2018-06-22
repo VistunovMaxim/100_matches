@@ -14,6 +14,7 @@ int main (){
     do {
         
         if (Player==1){
+            
             do{
                 std::cout<<"Ваш ход. На столе "<<Count<<" спичек.\n";
                 std::cout<<"Сколько спичек Вы берете?\n";
@@ -29,21 +30,26 @@ int main (){
                     
                 }
             }
+            
             while (!Correct);
             
         } else {
+            
             do {
                 Num=rand()%10+1;
                 if (Num>Count)
                     Num=Count;
                 std::cout<<"Мой ход. Я взял "<<Num<<" спичек\n";}
             while (!Correct);
+            
         }
         
         
         Count-=Num;
+        
         if (Player==1){
             Player=2;
+            
         } else {
             Player=1;
         }
@@ -57,5 +63,6 @@ int main (){
     } else {
         std::cout<<"Вы проиграли!\n";
     }
+    
     return 0;
 }
