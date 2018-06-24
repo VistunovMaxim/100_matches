@@ -4,6 +4,7 @@ CC = g++ -c $< -o $@ $(CFLAGS)
 
 all: bin build bin/OneHundredMatches
 
+
 bin/OneHundredMatches: build/main.o
 	g++ $^ -o $@ $(CFLAGS)
 
@@ -18,3 +19,4 @@ bin:
 clean:
 	rm -rf build
 	rm -rf bin
+	
